@@ -1,0 +1,50 @@
+@import "maps.less";
+@mediaMobile: ~"(max-width: 767px)";
+@mediaTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+.products {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+
+    @media @mediaMobile{
+        display: block;
+    }
+    @media @mediaTablet{
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+        
+    }
+    
+    .product-item img {
+        width: 100%;
+        border-radius: 16px;
+
+        @media @mediaMobile{
+            margin-bottom: 12px;
+        }
+
+    }
+    
+    .product-button {
+        display: block;
+        background-color: #colors[bgButtom];
+        color: #colors[colorText];
+        text-align: center;
+        padding: 8px 0;
+        border-radius: 8px;
+        margin-top: 8px;
+        text-decoration: none;
+
+        @media @mediaMobile{
+            margin-bottom: 42px;
+        }
+
+        &:hover {
+            background-color: #colors[hoverBtn];
+        }
+    }
+}

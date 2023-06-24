@@ -1,0 +1,21 @@
+@mediaMobile: ~"(max-width: 767px)";
+@mediaTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media @mediaTablet{
+        max-width: 80%;
+    }
+    @media @mediaMobile{
+        max-width: 90%;
+    }
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
